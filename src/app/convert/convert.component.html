@@ -1,0 +1,13 @@
+<h1 class="font-roboto-1">{{title | uppercase}}</h1>
+<div class="example-container" style="display: flex">
+  <mat-form-field appearance="outline">
+    <input id="box" #box (keyup.enter)="onEnter(box.value)" matInput placeholder="Input String">
+  </mat-form-field>
+  <h1 class="font-2">{{ value | date: "fullDate" }}</h1>
+</div>
+<div class="button-row" style="text-align: center">
+  <button mat-button type="submit" (click)="fireEvent()">
+    <a routerLink="/result">Convert String</a>
+    <mat-icon style="margin-left: 5px">keyboard_arrow_right</mat-icon>
+  </button>
+</div>
